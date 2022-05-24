@@ -1,0 +1,537 @@
+body, html, #root, .app, .container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #13131c;
+
+}
+
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+input, button, textarea, :focus {
+    outline: none;
+}
+
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url('assets/fonts/Montserrat-Regular.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat-Light;
+  src: url('assets/fonts/Montserrat-Light.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('assets/fonts/Montserrat-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url('assets/fonts/Montserrat-Medium.ttf');
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  left: 650px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .2s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle-name {
+  color: white;
+  font-family: Montserrat-Medium;
+  position: fixed;
+  left: 14px;
+}
+
+.toggle-container {
+
+  position: fixed; /* or absolute */
+  top: 25%;
+  left: 50%;
+  background-color: #15151f;
+  width: 700px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #232331;
+  border-radius: 20px;
+
+}
+
+.token-input-nuker {
+  box-sizing: border-box;
+  outline: none;
+  position: fixed; /* or absolute */
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Montserrat-Regular;
+  width: 300px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #16161e;
+  border: none;
+  height: 25px;
+}
+
+.backimg:hover {
+  opacity: 70%;
+
+}
+
+.backimg {
+  height: 35px;
+  position: fixed; /* or absolute */
+    top: 8%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    fill: white !important;
+    transition: 0.5s;
+}
+
+.header-divider {
+  margin-top: 135px;
+  opacity: 10%;
+  width: 700px;
+  margin-left: 39px;
+  height: 1px;
+  border: 0;
+  background: white;
+}
+
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 700px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+
+
+.commands-container {
+  position: fixed; /* or absolute */
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-table thead tr {
+
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+  font-family: Montserrat-Medium;
+
+}
+
+th:nth-child(1) {
+  width: 1px;
+
+  }
+
+/* the second */
+th:nth-child(2) {
+  width: 10px;
+
+}
+
+/* the third */
+th:nth-child(3) {
+  width: 300px;
+
+ }
+
+.content-table th,
+.content-table td {
+  padding: 12px ;
+  font-family: Montserrat-Medium;
+
+}
+
+.content-table td {
+  color: #707081;
+}
+
+
+.content-table tbody tr {
+  border: none;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #262635;
+
+}
+
+
+
+
+
+
+.header {
+  color: white;
+
+  position: fixed; /* or absolute */
+    top: 7%;
+    left: 6%;
+    font-family: Montserrat-Bold;
+}
+
+.header-under {
+  color: white;
+  opacity: 60%;
+  position: fixed; /* or absolute */
+    top: 13%; /* XDDDD */
+    left: 6%;
+    font-size: 9pt;
+    font-family: Montserrat-Light;
+
+}
+
+.card-header {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  position: fixed; /* or absolute */
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat-Medium;
+
+}
+
+
+
+.TopBar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 30px;
+  background-color:#0e0e13;
+  -webkit-app-region: drag;
+  }
+
+.box-container {
+
+position: absolute;
+  left: 50%;
+  top: 62.5%;
+  transform: translate(-50%, -50%);
+  padding-right: 350px;
+}
+
+  .box {
+    width: 750px;
+    height: 550px;
+    background-color: #0f0f16;
+    border-radius: 50px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .box-half {
+    width: 350px;
+    height: 550px;
+    background-color: #0f0f16;
+    border-radius: 50px;
+
+    position:absolute;
+    left: 27%;
+    top: 62.5%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  .box-half2 {
+    width: 350px;
+    height: 550px;
+    background-color: #0f0f16;
+    border-radius: 50px;
+
+
+    position:absolute;
+    left: 73%;
+  top: 62.5%;
+    transform: translate(-50%, -50%);
+
+  }
+
+
+
+
+  .dashboardimg {
+    height: 95px;
+    width: 95px;
+
+
+  }
+
+  .pfp {
+    border-radius: 100px;
+    height: 180px;
+    width: 180px;
+    position: fixed; /* or absolute */
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 7px solid #1b1b26;
+
+
+    /* border: 4px solid #f34040; */
+
+
+
+
+  }
+
+  .bot-logout-btn:hover {
+    background-color: #c73636;
+  }
+
+  .discord-tag {
+    position: fixed; /* or absolute */
+    top: 37.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Montserrat-Regular;
+    font-size: 12px;
+  }
+
+  .bot-logout-btn {
+    position: fixed; /* or absolute */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 20px;
+
+
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+    border-radius: 20px;
+    transition: 0.5s;
+    color: white;
+    background-color: #f34040;
+
+  }
+
+
+
+  .personimg {
+    height: 95px;
+    width: 95px;
+
+
+  }
+
+  .crosshair {
+    height: 95px;
+  }
+
+.nuker {
+  height: 95px;
+}
+
+.commands {
+  height: 95px;
+}
+
+.shield {
+  height: 95px;
+
+
+}
+
+.rpc {
+  height: 95px;
+
+}
+
+.grid-button:hover {
+  background-color: #1e1e2b;
+
+}
+
+
+
+.grid-button {
+  height: 176px;
+  width: 176px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-color: #1b1b26;
+  -webkit-box-shadow: 0px 0px 11px -8px rgba(0,0,0,0.64);
+box-shadow: 0px 0px 11px -8px rgba(0,0,0,0.64);
+transition: 0.5s;
+
+
+
+}
+
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  position: absolute;
+  bottom: 30px;
+  padding: 30px;
+  left: 50%;
+  transform: translate( -50%);
+
+}
+
+
+
+.container {
+  font-size: 28px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #16161e;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.input {
+ box-sizing: border-box;
+ outline: none;
+ color: #292929;
+ width: 100%;
+ padding: 12px 20px;
+ font-size: 14px;
+ background-color: #1a1b26;
+ outline: none;
+ border: none;
+ margin: 10px auto;
+ border-radius: 10px;
+}
+
+
+
+
+
+.submitButton {
+ padding-top: 16px;
+
+}
+
+.btn:hover {
+  background-position: right center;
+
+}
+
+
+
+
+.btn {
+ width: 100%;
+ min-width: 280px;
+ padding: 12px;
+ font-size: 14px;
+ font-weight: bold;
+ border-radius: 4px;
+ cursor: pointer;
+ outline: none;
+ border: none;
+ margin: 25px auto;
+ border-radius: 20px;
+ transition: 1s;
+ color: white;
+ background-size: 200% auto;
+
+ background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+
+}
